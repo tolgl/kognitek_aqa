@@ -23,3 +23,11 @@ class BasePage:
     def switch_to_window(self, count, index_win):
         self.wait_open_new_window(count)
         self.driver.switch_to.window(self.driver.window_handles[index_win])
+
+    def close_window(self, count, index_win):
+        self.wait_open_new_window(count)
+        self.driver.switch_to.window(self.driver.window_handles[index_win])
+        self.driver.close()
+
+    def count_window(self):
+        return len(self.driver.window_handles)
