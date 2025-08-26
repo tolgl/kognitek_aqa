@@ -1,7 +1,7 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from congif import BASE_URL
+from config import BASE_URL
 
 
 class BasePage:
