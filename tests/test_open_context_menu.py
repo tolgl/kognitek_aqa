@@ -22,3 +22,14 @@ class TestOpenContextMenu:
         current_url = base_page.get_current_url()
 
         assert 'accounts.google.com' in current_url
+
+    def test_return_previous_page(self, driver):
+        base_page = BasePage(driver)
+        base_page.go_to_page()
+        main_page = MainPageHelper(driver)
+        main_page.double_click_on_text()
+        main_page.click_link_gmail_context_menu()
+        base_page.return_previous_page()
+        current_url = base_page.get_current_url()
+
+        assert 'omayo.blogspot.com' in current_url
