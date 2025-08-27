@@ -33,3 +33,6 @@ class BasePage:
         action = ActionChains(self.driver)
         action.double_click(element)
         action.perform()
+
+    def get_current_url(self):
+        return self.driver.current_url
