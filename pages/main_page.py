@@ -15,3 +15,10 @@ class MainPageHelper(BasePage):
 
     def click_button_open_new_window(self):
         self.find_element(MainPageLocators.button_open_new_window).click()
+
+    def double_click_on_text(self):
+        element = self.find_element(MainPageLocators.text_double_click)
+        self.double_click(element)
+
+    def get_class_context_menu(self):
+        return self.find_element(MainPageLocators.context_menu).get_attribute("class")
