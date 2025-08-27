@@ -22,3 +22,6 @@ class MainPageHelper(BasePage):
 
     def get_class_context_menu(self):
         return self.find_element(MainPageLocators.context_menu).get_attribute("class")
+
+    def click_link_gmail_context_menu(self):
+        self.find_element(MainPageLocators.context_menu_link_gmail).click()
