@@ -1,5 +1,6 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
 
 from config import BASE_URL
 
@@ -31,3 +32,8 @@ class BasePage:
 
     def count_window(self):
         return len(self.driver.window_handles)
+
+    def double_click(self, element):
+        action = ActionChains(self.driver)
+        action.double_click(element)
+        action.perform()
