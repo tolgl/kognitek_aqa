@@ -7,3 +7,4 @@ class MainPageLocators:
     button_open_new_window = (By.XPATH, ".//a[text()='Open a popup window']")
     text_double_click = (By.ID, "testdoubleclick")
     context_menu = (By.ID, "myDropdown")
+    context_menu_link_gmail = (By.XPATH, ".//div[@id='myDropdown']/a[contains(@href, 'gmail.com')]")
