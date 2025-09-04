@@ -15,7 +15,8 @@ class BasePage:
         return self.driver.get(self.base_url)
 
     def find_element(self, locator, wait_time=5):
-        return WebDriverWait(self.driver, wait_time).until(expected_conditions.presence_of_element_located(locator))
+        return WebDriverWait(self.driver, wait_time).until(expected_conditions.presence_of_element_located(locator),
+                                                           message=f"Can't find element by locator {locator}")
 
     def switch_to_window(self, count, index_win, wait_time=5):
         WebDriverWait(self.driver, wait_time).until(
