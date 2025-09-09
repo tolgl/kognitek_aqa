@@ -8,3 +8,4 @@ class MainPageLocators:
     text_double_click = (By.ID, "testdoubleclick")
     context_menu = (By.ID, "myDropdown")
     context_menu_link_gmail = (By.XPATH, ".//div[@id='myDropdown']/a[contains(@href, 'gmail.com')]")
+    button_click_to_get_alert = (By.XPATH, ".//input[@value='ClickToGetAlert']")
