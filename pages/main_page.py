@@ -1,3 +1,5 @@
+from selenium.common import TimeoutException
+
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
 
@@ -25,3 +27,13 @@ class MainPageHelper(BasePage):
 
     def click_link_gmail_context_menu(self):
         self.find_element(MainPageLocators.context_menu_link_gmail).click()
+
+    def click_button_click_to_get_alert(self):
+        self.find_element(MainPageLocators.button_click_to_get_alert).click()
+
+    def check_alert(self):
+        try:
+            self.accept_alert()
+            return "alert accepted"
+        except TimeoutException:
+            return "no alert"
