@@ -40,3 +40,6 @@ class BasePage:
 
     def return_previous_page(self):
         self.driver.back()
+
+    def accept_alert(self):
+        self.driver.switch_to.alert.accept()
