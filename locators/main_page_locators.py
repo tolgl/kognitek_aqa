@@ -9,3 +9,4 @@ class MainPageLocators:
     context_menu = (By.ID, "myDropdown")
     context_menu_link_gmail = (By.XPATH, ".//div[@id='myDropdown']/a[contains(@href, 'gmail.com')]")
     button_click_to_get_alert = (By.XPATH, ".//input[@value='ClickToGetAlert']")
+    widget_other_sites_to_practice_automation = (By.XPATH, ".//h2[text()='Other Sites to Practice Automation']/../div[@class='widget-content']/ul/li/a")
