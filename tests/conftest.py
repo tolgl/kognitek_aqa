@@ -4,6 +4,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import pytest
 
+from pages.base_page import BasePage
+from pages.main_page import MainPageHelper
+
 
 @pytest.fixture
 def driver():
@@ -16,3 +19,11 @@ def driver():
     yield driver
 
     driver.quit()
+
+
+@pytest.fixture()
+def double_click_on_text(driver):
+    base_page = BasePage(driver)
+    base_page.go_to_page()
+    main_page = MainPageHelper(driver)
+    main_page.double_click_on_text()
