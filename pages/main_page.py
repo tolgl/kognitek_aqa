@@ -37,3 +37,10 @@ class MainPageHelper(BasePage):
             return "alert accepted"
         except TimeoutException:
             return "no alert"
+
+    def get_list_other_sites_to_practice_automation(self):
+        list_sites = []
+        for site in self.find_elements(MainPageLocators.widget_other_sites_to_practice_automation):
+            list_sites.append(site.text)
+        return list_sites
+
