@@ -10,3 +10,6 @@ class MainPageLocators:
     context_menu_link_gmail = (By.XPATH, ".//div[@id='myDropdown']/a[contains(@href, 'gmail.com')]")
     button_click_to_get_alert = (By.XPATH, ".//input[@value='ClickToGetAlert']")
     widget_other_sites_to_practice_automation = (By.XPATH, ".//h2[text()='Other Sites to Practice Automation']/../div[@class='widget-content']/ul/li/a")
+    field_search = (By.XPATH, ".//td[@class='gsc-input']/input[@title='search']")
+    button_search = (By.XPATH, ".//td[@class='gsc-search-button']/input[@title='search']")
+    text_result_search = (By.XPATH, ".//div[@class='status-msg-wrap']/div[@class='status-msg-body']")
