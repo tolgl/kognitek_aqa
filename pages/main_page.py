@@ -1,4 +1,5 @@
 from selenium.common import TimeoutException
+from selenium.webdriver import Keys
 
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
@@ -44,3 +45,11 @@ class MainPageHelper(BasePage):
             list_sites.append(site.text)
         return list_sites
 
+    def filling_field_search(self, query):
+        self.find_element(MainPageLocators.field_search).send_keys(query)
+
+    def click_button_search(self):
+        self.find_element(MainPageLocators.button_search).click()
+
+    def get_text_result_search(self):
+        return self.find_element(MainPageLocators.text_result_search).text
