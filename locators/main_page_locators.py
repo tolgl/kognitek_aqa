@@ -13,3 +13,4 @@ class MainPageLocators:
     field_search = (By.XPATH, ".//td[@class='gsc-input']/input[@title='search']")
     button_search = (By.XPATH, ".//td[@class='gsc-search-button']/input[@title='search']")
     text_result_search = (By.XPATH, ".//div[@class='status-msg-wrap']/div[@class='status-msg-body']")
+    select_element = (By.ID, "multiselect1")
