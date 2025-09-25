@@ -1,5 +1,4 @@
 from selenium.common import TimeoutException
-
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
 
@@ -52,3 +51,6 @@ class MainPageHelper(BasePage):
 
     def get_text_result_search(self):
         return self.find_element(MainPageLocators.text_result_search).text
+
+    def select_element_by_multi_selection_box(self, start_index, final_index):
+        self.select_element(locator=MainPageLocators.select_element, start_index=start_index, final_index=final_index)
