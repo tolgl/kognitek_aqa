@@ -1,4 +1,5 @@
 from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 
@@ -47,3 +48,9 @@ class BasePage:
 
     def accept_alert(self):
         self.driver.switch_to.alert.accept()
+
+    def select_element(self, locator, start_index, final_index):
+        element = self.find_element(locator)
+        select = Select(element)
+        for i in range(start_index, final_index):
+            select.select_by_index(i)
