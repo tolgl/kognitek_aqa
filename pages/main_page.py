@@ -54,3 +54,9 @@ class MainPageHelper(BasePage):
 
     def select_element_by_multi_selection_box(self, start_index, final_index):
         self.select_element(locator=MainPageLocators.select_element, start_index=start_index, final_index=final_index)
+
+    def click_radio_male(self):
+        self.find_element(MainPageLocators.radio_male).click()
+
+    def check_status_radio_male(self):
+        return self.find_element(MainPageLocators.radio_male).is_selected()
