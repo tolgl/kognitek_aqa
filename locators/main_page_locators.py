@@ -15,3 +15,4 @@ class MainPageLocators:
     text_result_search = (By.XPATH, ".//div[@class='status-msg-wrap']/div[@class='status-msg-body']")
     select_element = (By.ID, "multiselect1")
     radio_male = (By.XPATH, ".//div[@class='widget-content']/input[@id='radio1']")
+    un_ordered_list = (By.XPATH, ".//h2[text()='UnOrdered list']/../div/ul/li")
