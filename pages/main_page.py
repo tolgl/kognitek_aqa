@@ -60,3 +60,10 @@ class MainPageHelper(BasePage):
 
     def check_status_radio_male(self):
         return self.find_element(MainPageLocators.radio_male).is_selected()
+
+    def get_un_ordered_list(self):
+        un_ordered_list = []
+        for value in self.find_elements(MainPageLocators.un_ordered_list):
+            un_ordered_list.append(value.text)
+
+        return un_ordered_list
